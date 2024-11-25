@@ -110,7 +110,7 @@ export default function AppMain() {
       <AddCanvas handleFormSubmit={handleFormSubmit} handleFormField={handleFormField} formData={formData} />
 
       <PostList>
-        {task.data ? task.data.map(post => <div className="col-3 p-3" key={post.id}>
+        {task.data ? task.data.map(post => <div className="col-4 p-3" key={post.id}>
 
           <AppCard key={post.id} handlerDeleteTask={handlerDeleteTask} post={post} />
 
