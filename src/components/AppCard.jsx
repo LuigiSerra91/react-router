@@ -8,7 +8,7 @@ export default function AppCard({ post, handlerDeleteTask }) {
 
     return (
         <>
-            <div className="card">FF
+            <div className="card">
                 <img src={api_server + post?.img} alt="img-anime" />
                 <div className="card-body">
 

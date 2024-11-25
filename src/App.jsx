@@ -1,27 +1,30 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import AppHeader from './components/AppHeader'
+import ChiSiamo from './pages/ChiSiamo'
 import AppMain from './components/AppMain'
-import AppFooter from './components/AppFooter'
-/* 
-Esercizio
-Creare un semplice form con un campo input per il titolo di un articolo del blog. Al submit del form, mostrare la lista degli articoli inseriti, con la possibilità di cancellare ciascun articolo utilizzando un'icona.
-BONUS
-Implementare la funzionalità di modifica del titolo di un post.
-Aggiungere più campi al form (ad es. lo stato di un articolo - draft, published - o l’autore)
-Buon divertimento e confermate lettura come al solito
-*/
-
+import Home from './pages/Home'
+import DefaultLayout from './pages/DefaultLayout'
 
 
 function App() {
- 
- 
+
+
   return (
     <>
-      <AppHeader />
-      <AppMain />
-      <AppFooter />
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+
+            <Route path='/' element={<Home />} />
+            <Route path='/chisiamo' element={<ChiSiamo />} />
+            <Route path='/postlist' element={<AppMain />} />
+
+          </Route>
+
+
+
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

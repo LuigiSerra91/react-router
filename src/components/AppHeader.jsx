@@ -1,11 +1,21 @@
+import MainMenu from "./MainMenu"
 export default function AppHeader() {
 
-    const pageTitle = <h1 className="bg-primary p-4 text-center">Benvenuti nel mio Blog</h1>
+    const pageTitle = <h1>Benvenuti nel mio Blog</h1>
 
     return (
-        <header>
-            {pageTitle}
-        </header>
+
+        <>
+            <header className="d-flex justify-content-between bg-primary p-2 text-white">
+                {pageTitle}
+                <MainMenu />
+
+
+
+
+            </header>
+
+        </>
 
     )
 }
