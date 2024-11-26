@@ -84,28 +84,7 @@ export default function AddCanvas({ handleFormSubmit, handleFormField, formData 
               onChange={handleFormField}
             ></textarea>
           </div>
-          <select
-            id="category"
-            name="category"
-            placeholder="Seleziona categoria post"
-            value={formData.category}
-            onChange={handleFormField}>
-            <option value="">
-              hobby
-            </option>
-            <option value="">
-              viaggi
-            </option>
-            <option value="">
-              cultura
-            </option>
-            <option value="">
-              sport
-            </option>
-            <option value="">
-              anime
-            </option>
-          </select>
+
 
 
           <div className="form-check mb-3">

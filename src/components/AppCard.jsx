@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function AppCard({ post, handlerDeleteTask }) {
 
 
@@ -9,7 +11,10 @@ export default function AppCard({ post, handlerDeleteTask }) {
     return (
         <>
             <div className="card">
+                <Link to={`/postlist/${post.id}`}>
                 <img src={api_server + post?.img} alt="img-anime" />
+                </Link>
+                
                 <div className="card-body">
 
                     <h3 className="card-title">{post?.title}</h3>
