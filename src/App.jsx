@@ -4,7 +4,7 @@ import ChiSiamo from './pages/ChiSiamo'
 import AppMain from './components/AppMain'
 import Home from './pages/Home'
 import DefaultLayout from './pages/DefaultLayout'
-
+import PostList from './pages/PostList'
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
 
             <Route path='/' element={<Home />} />
             <Route path='/chisiamo' element={<ChiSiamo />} />
-            <Route path='/postlist' element={<AppMain />} />
+            <Route path='/postlist' element={<PostList />} />
 
           </Route>
 
