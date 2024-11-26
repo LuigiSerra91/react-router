@@ -8,9 +8,7 @@ img {
     max-width: 100%;
 }
 
-body {
-    background-color: black;
-}
+
 
 .card {
 
@@ -34,6 +32,8 @@ body {
 
 main {
     background-color: black;
+    padding-bottom: 2rem;
+   
 }
 
 header {
@@ -50,6 +50,7 @@ header {
 
 footer{
     color: white;
+    
 }
 
 .vh{
@@ -68,9 +69,9 @@ footer{
 
 .card-group{
     img{
-        width: 400px;
+        width: 100%
     }
-    max-width: 1000px;
+    max-width: 500px;
 
    
 }
