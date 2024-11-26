@@ -66,4 +66,13 @@ footer{
     text-shadow: 5px 5px 5px rgb(150, 149, 149);
 }
 
+.card-group{
+    img{
+        width: 400px;
+    }
+    max-width: 1000px;
+
+   
+}
+
 

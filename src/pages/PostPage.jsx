@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const api_server = 'http://localhost:3002'
+
 export default function PostPage() {
     const navigate = useNavigate()
     const [task, setTask] = useState(null)
@@ -14,7 +14,7 @@ export default function PostPage() {
             fetch(url)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    
 
                     const keys = Object.keys(data)
                     if (keys.includes('error')) {
@@ -29,31 +29,37 @@ export default function PostPage() {
 
     return (
 
-        <>
+        <div className="container d-flex justify-content-center">
             {
-        task ? (
-<div className="card">
-                <img src={`http://localhost:3002/${task.img}`} alt="img-anime" />
-                <div className="card-body">
-
-                    <h3 className="card-title">{task.title}</h3>
-                    <p className="card-text">{task.author}</p>
-
-                    <p className="card-text">{task.description}</p>
+                task ? (
 
 
+                    <div className="card-group p-3">
+                        <div className="card p-2">
+                            <div className="img">
+                            <img className="card-img-top" src={`http://localhost:3002/${task.img}`} alt="img-anime" />
+                            </div>
+                            
+                            <div className="card-body">
+                            <h3 className="card-title">{task.title}</h3>
+                                <p className="card-text">{task.author}</p>
+
+                                <p className="card-text">{task.description}</p>
+                            </div>
 
 
-                </div>
 
-            </div>
-         
-        ) : (
-          <div>loading...</div>
+                        </div>
+                    </div>
 
-        )
-      }
-        </>
+
+                ) : (
+                    <div>loading...</div>
+
+                )
+            }
+        </div>
 
     )
 }
+
