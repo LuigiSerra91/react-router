@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 export default function PostPage() {
     const navigate = useNavigate()
@@ -11,7 +11,7 @@ export default function PostPage() {
 
     useEffect(
         () => {
-           
+
             fetch(url)
                 .then(res => res.json())
                 .then(data => {
@@ -26,7 +26,7 @@ export default function PostPage() {
 
                 })
         },
-   [] )
+        [])
 
     return (
 
@@ -48,7 +48,9 @@ export default function PostPage() {
                                 <p className="card-text">{task.description}</p>
                             </div>
 
-
+                            <Link to={"/postlist"}>
+                                <button className="btn bg-primary">Back PostList</button>
+                            </Link>
 
                         </div>
                     </div>
